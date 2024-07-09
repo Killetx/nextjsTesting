@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <div id="main"></div>
+    
+        <script type="text/jsx">
+            const main = document.getElementById("main");
+
+            function Header({val}) {
+                return(<h1>{val}</h1>)
+            }
+
+            const root = ReactDOM.createRoot(main);
+            root.render(<Header val="Hello and goodbye." />)
+        </script>
+
+    </body>
+</html>

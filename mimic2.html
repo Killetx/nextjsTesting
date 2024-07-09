@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+        <div id="app"></div>
+        
+        <script type="text/jsx">
+
+            const app = document.getElementById('app');
+
+            function willIt(yn) {
+                if(yn=='yes') return("It will!"); else return("It won't :[");
+            }
+
+
+            function Objectively(props) {
+                return (<h1>{willIt(props.selector)}</h1>)
+            }
+
+            const root = ReactDOM.createRoot(app);
+            root.render(<Objectively selector="no"/>)
+            
+        </script>
+    </body>
+</html>

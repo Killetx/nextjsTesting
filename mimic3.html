@@ -1,0 +1,31 @@
+<html>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <div id="reactor"></div>
+
+
+    <script type="text/jsx">
+        const reactor = document.getElementById("reactor");
+
+        function Container() {
+            return(
+                <div>
+                    <Heading id='0' />
+                    <Heading id='1' />
+                </div>
+            )
+        }
+
+        function Heading({id}) {
+            if(id == 0) return(<h1>Invalid Input! {id}</h1>); else return(<h1>Thanks for your valid input of {id}!</h1>)
+        }
+
+
+
+        const root = ReactDOM.createRoot(reactor);
+        root.render(<Container />);
+    </script>
+</html>
